@@ -1,0 +1,115 @@
+.menu {
+    background: var(--background-color);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5.25rem;
+    z-index: 999;
+}
+
+/* Hamburger menu */ 
+.hamburger-menu {
+    display: none;
+}
+
+.hambar {
+    background-color: var(--text-color);
+    border-radius: 1.563rem;
+    display: block;
+    height: 4px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    width: 29px;
+}
+
+/* Menu links */
+.nav-menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    margin-left: 3rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline var(--primary-color);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+}
+
+.nav-link.active {
+    background: var(--primary-color);
+    color: var(--background-color);
+    font-weight: bold;
+    padding: 2.1rem 1.4rem;
+}
+
+.logoimg {
+    width: 75%;
+}
+
+@media only screen and (max-width: 1280px) {
+.navbar {
+    padding: 1rem 1.25rem;
+}
+.nav-menu {
+    background-color: var(--secondary-color);
+    flex-direction: column;
+    padding: 2.5rem 0 4rem;
+    position: absolute;
+    right: -100%;
+    text-align: center;
+    top: 5.5rem;
+    transition: 0.3s;
+    width: var(--default-width);
+    z-index: 1;
+}
+.nav-menu.active {
+    right: var(--clear-space);
+}
+.nav-item {
+    margin: 1.2rem 0;
+}.nav-link {
+    color: var(--background-color);
+}
+.nav-link.active {
+    background: none;
+    text-decoration: underline;
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.25em;
+}
+.hamburger-menu {
+    cursor: pointer;
+    display: block;
+    margin-right: 0.5rem;
+} 
+/* Hamburger menu closer | opener */
+.hamburger-menu.active .hambar:nth-child(2) {
+    opacity: var(--clear-space);
+}
+.hamburger-menu.active .hambar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger-menu.active .hambar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+   }
+}
+@media only screen and (max-width: 900px) {
+.nav-menu {
+    top: 5.5rem;
+   }
+}
