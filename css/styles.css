@@ -1,0 +1,7 @@
+@import "imports/variables.css";
+@import "imports/nav.css";
+@import "imports/headers.css";
+@import "imports/footer.css";
+
+/* index.html */
+@import "index.css"; 
