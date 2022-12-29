@@ -1,0 +1,109 @@
+.header, .subheader, .content-header, .alt-header {
+    color: var(--background-color);
+    letter-spacing: 0.15rem;
+    line-height: 3.5rem;
+    position: relative;
+}
+  
+.alt-header, .content-header, .header, .subheader {
+    min-height: 50vh;
+}
+  
+/* MAIN HEADER */
+.header {
+    background: url("../../img/headers/header.jpg") center bottom no-repeat;
+    background-size: cover;
+}
+    
+.header-content, .subheader-content {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    transform: translateX(-50%);
+}
+  
+.heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+  
+.subheading {
+    font-size: 1.75rem;
+}
+  
+.cta {
+    background: var(--secondary-color);
+    border-radius: 0.25rem;
+    color: var(--background-color);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.1rem; 
+    padding: 1rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+    top: var(--clear-space);
+    transition: ease 0.4s;
+}
+  
+.cta:hover {
+    background: var(--darken-background);
+    top: -0.625rem;
+}
+  
+.button-wrap {
+    margin-top: 2.5rem;
+}
+  
+/* SUB (2ND) HEADER | CONTACT-, -ABOUT AND EXHIBITION PAGE */
+.subheader {
+    background: var(--primary-color);
+}
+  
+.content-header {
+    background: url("../../img/headers/subheader.jpg") center bottom no-repeat;
+    background-size: cover;
+}
+  
+/* ALTERNATIVE HEADER | FROM VISIT PAGE */
+.alt-header {
+    background: url("../../img/headers/altheader.jpg") center bottom no-repeat;
+    background-size: cover;
+}
+  
+@media only screen and (max-width: 1280px) {
+.header-content, .subheader-content {
+    line-height: 3.25rem;
+   }
+.blog-page, .gallery-page {
+    padding: 1rem 0 0;
+   }
+.button-wrap {
+    margin-top: 1.5rem;
+   }
+.alt-header, .content-header, .header, .subheader {
+    min-height: 56vh;
+   }
+}
+@media only screen and (max-width: 900px) {
+.alt-header, .content-header, .header, .subheader {
+    margin-bottom: 2rem;
+    min-height: 50vh;
+   }
+.header-content, .subheader-content {
+    line-height: 2.5rem;
+    top: 3.75rem;
+   }
+.heading {
+    font-size: 1.7rem;
+   }
+.subheading {
+    font-size: 1.25rem;
+   }
+}
+  
+@media only screen and (max-width: 600px) {
+.alt-header, .content-header, .header, .subheader {
+    min-height: 35vh;
+   }
+}
