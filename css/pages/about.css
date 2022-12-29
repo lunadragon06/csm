@@ -1,0 +1,215 @@
+@import "../imports/variables.css";
+@import "../imports/nav.css";
+@import "../imports/headers.css";
+@import "../imports/footer.css";
+
+.info_container {
+  margin: 3rem auto 0;
+  max-width: 1280px;
+  padding: 1.5rem 0 8.5rem;
+}
+
+/* INTRODUCTION SECTION */
+.intro-page {
+  grid-gap: 0.75rem;
+  grid-template-areas:
+    "photo heading heading heading"
+    "photo title title title"
+    "photo . hr hr"
+    "photo . summary summary"
+    "photo . description description"
+    "photo . . .";
+  height: 475px;
+  margin: 1.5rem 0 4.5rem;
+}
+
+hr {
+  grid-area: hr;
+  margin-bottom: 6rem;
+}
+
+.intro-description {
+  color: var(--paragraph-color);
+  grid-area: description;
+  line-height: var(--default-wordline);
+  margin-top: 0.25rem;
+  padding-bottom: 3.25rem;
+}
+
+.intro-photo {
+  grid-area: photo;
+} 
+
+.intro-summary {
+  font-size: 1.05rem;
+  grid-area: summary;
+  letter-spacing: 0.025rem;
+  line-height: 1.75rem;
+  margin-top: -4rem;
+}
+
+.intro-title {
+  font-size: 2rem;
+  grid-area: title;
+  grid-area: heading;
+  margin-top: var(--clear-space);
+  padding-left: 0.6rem;
+}
+
+/* Intro image */
+.intro-image {
+  height: var(--default-width);
+  margin-bottom: 0.85em;
+  overflow: hidden;
+  width: var(--default-width);
+}
+  
+.intro-image img {
+  height: var(--default-width);
+  object-fit: cover;
+  object-position: center;
+  width: var(--default-width);
+}
+
+/* CONTENT SECTION */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 3em auto 0;
+}
+
+.content-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-sizing: border-box;
+  margin: var(--clear-space);
+  min-height: 200px;
+  padding: 1.875rem;
+  text-align: center;
+  width: 400px;
+}
+
+.content-card i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.content-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: var(--clear-space);
+}
+
+.content-card p {
+  color: var(--paragraph-color);
+  font-size: 0.9rem;
+  letter-spacing: 0.031rem;
+  line-height: var(--default-wordline);
+  text-align: left;
+}
+
+.btn {
+  border-radius: 0.25rem;
+  margin-top: 2.5rem;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  opacity: var(--clear-space);
+  position: absolute;
+  right: -1.25rem;
+  top: var(--clear-space);
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 1.563rem;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: var(--clear-space);
+}
+
+@media (max-width: 1280px) {
+.info_container {
+  margin: 0 auto 0;
+  padding: 0 0 3rem;
+ }
+.intro-page {
+  height: auto;
+  margin-right: 2rem;
+  margin-top: var(--clear-space);
+ }
+.intro-title {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+ }
+.intro-summary {
+  padding-bottom: 1rem;
+ }
+.intro-description {
+  margin-top: -0.5rem;
+  padding-bottom: 2rem;
+ }
+hr {
+  margin-bottom: 5.5rem;
+ }
+.content-wrapper {
+  justify-content: space-evenly;
+  margin-bottom: -1.5rem;
+  margin-top: -1.5rem;
+}
+.content-card {
+  margin: 0 0 3.25rem;
+  width: 300px;
+ }
+}
+
+@media (max-width: 900px) {
+.intro-page {
+  grid-template-areas:
+    "photo photo photo"
+    "heading heading heading"
+    "hr hr hr"
+    "title title title"
+    "summary summary summary"
+    "description description description";
+  margin-bottom: 2rem;
+  margin-right: -0.75rem;
+  margin-top: -2rem;
+}
+.intro-title, .intro-summary, .intro-description {
+  padding: 0rem 2rem 3rem;
+}
+.intro-title {
+  margin-top: 1rem;
+}
+.intro-summary {
+  padding-bottom: 0.75rem;
+}
+.intro-description {
+  padding-bottom: 3rem;
+}
+hr {
+  margin-bottom: 4.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: -2.5rem;
+ }
+.content-wrapper {
+  margin: 0 auto 0;
+ }
+.content-card {
+  margin-bottom: 4rem;
+  width: 300px;
+ }
+}
