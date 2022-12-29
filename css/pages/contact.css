@@ -1,0 +1,105 @@
+@import "../imports/variables.css";
+@import "../imports/nav.css";
+@import "../imports/headers.css";
+@import "../imports/footer.css";
+
+body {
+    background: var(--primary-color);
+}
+
+.contact_container {
+    margin: -1.75rem auto 0;
+    max-width: 1024px;
+    padding: 1.5rem 0 9rem;
+}
+
+.required {
+    color: var(--background-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    padding: 0rem 0rem;
+}
+
+/* CONTACTFORM */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.fullwidth {
+    grid-column: span 2;
+}
+
+/* Input display(s) */
+input::placeholder, textarea::placeholder{
+    color: var(--text-color);
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=phone]:focus, select[type=select]:focus, textarea[type=message]:focus {
+    outline: 2px solid var(--secondary-color); 
+}
+
+input, select, textarea {
+    border: none;
+    border-radius: 0.25rem;
+    color: var(--text-color);
+    font-family: var(--font-type);
+    padding: 1rem;
+}
+
+textarea:focus, input:focus {
+    color: var(--darken-background);
+}
+
+/* Submit form button */
+button {
+    border-radius: 0.25rem;
+    grid-column: span 2;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+button:disabled {
+    background: #416090;
+    cursor: unset;
+}
+
+/* Message confirmation */
+.message {
+    background: #18cfcf;
+    border: 1px solid #007850;
+    border-radius: 0.25rem;
+    color: var(--background-color);
+    letter-spacing: 0.05rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+}
+
+#info {
+    padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 1280px) {
+.contact_container {
+    max-width: 768px;
+   }
+.form {
+    grid-template-columns: 1fr;
+   }
+button, .fullwidth {
+    grid-column: span 1;
+   }
+}
+
+@media only screen and (max-width: 900px) {
+.contact_container {
+    margin-top: -3.75rem;
+    max-width: 300px;
+   }
+.subheader {
+    line-height: 2rem;
+   }
+}
