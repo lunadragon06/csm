@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: var(--clear-space);
+  padding: var(--clear-space);
+}
+
+a {
+  text-decoration: none;
+}
+
+b, p {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  line-height: var(--default-wordline);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+html {
+  font-family: var(--font-type);
+}
+
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  width: var(--default-width);
+}
+
+:root {
+  /* Color values */
+  --background-color: #ffffff;
+  --darken-background: #040720; 
+  --primary-color: #1596ff; 
+  --secondary-color: #001cd4; 
+  --text-color: #000a4a; 
+  --paragraph-color: #475569;
+  /* Other page values*/
+  --clear-space: 0;
+  --default-wordline: 1.5rem;
+  --default-width: 100%;
+  --font-type: "Montserrat", 'sans-serif'; 
+}
+
+button {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--background-color);
+  cursor: pointer;
+  font-family: var(--font-type);
+  font-size: 1rem;
+  height: 3rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  width: var(--default-width);
+}
+
+button:hover {
+  background-color: var(--darken-background);
+}
+
+hr {
+  background: var(--primary-color); 
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+/* From exhibitions.css and about.css */
+.exhibition-page, .intro-page {
+  background: var(--background-color);
+  display: grid;
+  grid-template-columns: 50% min-content 1fr max-content;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+figure {
+  margin: var(--clear-space);
+}
+
+@media (max-width: 900px)  {
+  .exhibition-page, .intro-page {
+    grid-template-columns: min-content 1fr 1fr;
+  }
+}
+
+/* Hotjar */
+i._hj-CoyQX__styles__iconX._hj-3e6MN__styles__icon {
+  margin-top: 0.03rem;
+}
