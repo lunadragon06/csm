@@ -1,0 +1,56 @@
+@import "../imports/variables.css";
+@import "../imports/nav.css";
+@import "../imports/headers.css";
+@import "../imports/footer.css";
+
+.visit_container {
+  margin: 2rem auto 0;
+  max-width: 1024px;
+  padding: 1.5rem 0 9rem;
+}
+
+/* INFO CARDS */
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.info-card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  box-sizing: border-box;
+  margin: 1.25rem;
+  min-height: 200px;
+  padding: 1.875rem;
+  text-align: center;
+  width: 300px;
+}
+
+.info-card i {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.info-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-top: var(--clear-space);
+}
+
+.info-card p {
+  color: var(--paragraph-color);
+  letter-spacing: 0.031rem;
+  line-height: var(--default-wordline);
+}
+
+@media (max-width: 1024px) {
+.visit_container {
+  margin: -0.25rem auto -4.75rem;
+  }
+.info-wrapper {
+  gap: 1rem;
+  }
+}

@@ -1,0 +1,139 @@
+@import "../imports/variables.css";
+@import "../imports/nav.css";
+@import "../imports/headers.css";
+@import "../imports/footer.css";
+
+.exhibition_container {
+  margin: 6rem auto 0;
+  max-width: 1024px;
+  padding: 1.5rem 0 9rem;
+}
+
+/* Exhibition gallery section */
+.exhibition-page {
+  border-radius: 0.25rem;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  grid-gap: 1rem;
+  grid-template-areas:
+    "photo heading heading heading"
+    "photo title title title"
+    "photo . hr hr"
+    "photo . summary summary"
+    "photo . description description"
+    "photo . . .";
+  height: 525px;
+  margin: 2rem 0 4.5rem;
+}
+
+hr {
+  grid-area: hr;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.description {
+  color: var(--paragraph-color);
+  grid-area: description;
+  line-height: var(--default-wordline);
+  margin: var(--clear-space);
+  padding-bottom: 3.25rem;
+}
+
+.exhibition-photo {
+  grid-area: photo;
+} 
+
+.subtitle {
+  grid-area: title; 
+  padding-left: 1rem;
+}
+
+.summary {
+  grid-area: summary;
+  line-height: 1.75rem;
+}
+
+.title {
+  font-size: 2rem;
+  grid-area: heading;
+  margin: var(--clear-space);
+  padding-left: 0.9rem;
+  padding-top: 1.25rem;
+}
+
+.title, .subtitle, .summary, .description {
+  margin-right: 1rem;
+}
+
+/* Exhibition images */
+.exhibition-image {
+  height: var(--default-width);
+  margin-bottom: 0.85em;
+  overflow: hidden;
+  width: var(--default-width);
+}
+    
+.exhibition-image img {
+  height: var(--default-width);
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s all ease-in-out;
+  width: var(--default-width);
+}
+    
+.exhibition-image:hover img {
+  transform: scale(1.5);
+}
+  
+@media (max-width: 1280px) {
+.exhibition_container {
+  margin: 3rem auto -4rem;
+  max-width: 900px;
+ }
+.exhibition-page {
+  height: auto;
+ }
+.summary {
+  padding-bottom: 1rem;
+ }
+.description {
+  padding-bottom: 2rem;
+ }
+}
+@media (max-width: 900px) {
+.exhibition_container {
+  margin: -4rem auto -2rem;
+  padding: 3rem 2rem;
+}
+.exhibition-page {
+  grid-template-areas:
+    "heading heading heading"
+    "hr hr hr"
+    "title title title"
+    "photo photo photo"
+    "summary summary summary"
+    "description description description";
+  margin-bottom: 2.5rem;
+  padding-right: var(--clear-space);
+}
+.title, .subtitle, .summary, .description {
+  padding: 0rem 1rem 0rem;
+ }
+.title {
+  padding-top: 1rem;
+ }
+.subtitle {
+  padding-bottom: 0.5rem;
+  padding-top: 0.25rem;
+ }
+.summary {
+  padding-bottom: 0.75rem;
+ }
+.description {
+  padding-bottom: 3rem;
+ }
+hr {
+  margin-bottom: var(--clear-space);
+  margin-left: 1rem;
+ }
+}
